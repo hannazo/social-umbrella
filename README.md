@@ -24,7 +24,7 @@ npm i
 ```
 Seed the database from the command line:
 ```
-npm run seedy
+npm run seed
 ```
   
 ## Usage
