@@ -3,33 +3,23 @@ const { Types } = require('mongoose');
 const userData = [
     {
         username: 'sampleUser',
-        email: 'sampleuser@email.com',
-        thoughts: [ new Types.ObjectId() ],
-        friends: [ new Types.ObjectId() ]
+        email: 'sampleuser@email.com'
     },
     {
         username: 'anotherUser',
         email: 'anotheruser@email.com',
-        thoughts: [ new Types.ObjectId() ],
-        friends: [ new Types.ObjectId() ]
     },
     {
         username: 'yetAnotherUser',
         email: 'yetanotheruser@email.com',
-        thoughts: [ new Types.ObjectId() ],
-        friends: [ new Types.ObjectId() ]
     },
     {
         username: 'oneMoreUser',
         email: 'onemoreuser@email.com',
-        thoughts: [ new Types.ObjectId() ],
-        friends: [ new Types.ObjectId() ]
     },
     {
         username: 'lastUser',
         email: 'lastuser@email.com',
-        thoughts: [ new Types.ObjectId() ],
-        friends: [ new Types.ObjectId() ]
     },
 ];
 

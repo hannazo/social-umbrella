@@ -20,12 +20,23 @@ const reactionSchema = new Schema(
             type: Date,
             default: Date.now,
             get: (date) => {
-                if (date) return date.toISOString().split("T")[0];
+                // if (date) return date.toISOString().split("T")[0];
+                if (date) {
+                    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                    const month = months[date.getMonth()];
+                    const day = date.getDate();
+                    const year = date.getFullYear();
+                    const hours = date.getHours();
+                    const minutes = date.getMinutes().toString().padStart(2, '0');
+                    const time = `${hours}:${minutes}`;
+
+                    return `${month} ${day}, ${year} at ${time}`;
+                }
             }
         },
     },
     {
-        timestamps: true,
+        // timestamps: true,
         toJSON: {
             getters: true,
             virtuals: true
@@ -47,7 +58,18 @@ const thoughtSchema = new Schema(
             type: Date,
             default: Date.now,
             get: (date) => {
-                if (date) return date.toISOString().split("T")[0];
+                // if (date) return date.toISOString().split("T")[0];
+                if (date) {
+                    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                    const month = months[date.getMonth()];
+                    const day = date.getDate();
+                    const year = date.getFullYear();
+                    const hours = date.getHours();
+                    const minutes = date.getMinutes().toString().padStart(2, '0');
+                    const time = `${hours}:${minutes}`;
+
+                    return `${month} ${day}, ${year} at ${time}`;
+                }
             }
         },
         username: {
@@ -57,7 +79,7 @@ const thoughtSchema = new Schema(
         reactions: [reactionSchema]
     },
     {
-        timestamps: true,
+        // timestamps: true,
         toJSON: {
             getters: true,
             virtuals: true
